@@ -9,6 +9,7 @@ struct _Stack {
   EleStack *item[MAXSTACK];
 };
 
+
 /**------------------------------------------------------------------
 Inicializa la pila reservando memoria. Salida: NULL si ha habido error o el
 puntero a la pila si ha ido bien
@@ -37,8 +38,7 @@ void stack_destroy(Stack *stack) {
   int i;
 
   if (stack) {
-    for (i = 0; i <= stack->top;
-         i++) { /*cambiar maxstack por el numero de elementos que tengamos*/
+    for (i = 0; i <= stack->top; i++) {
       EleStack_destroy(stack->item[i]);
       stack->item[i] = NULL;
     }

@@ -33,8 +33,8 @@ Elimina un elemento de pila. Entrada: elemento a destruir.
 void EleStack_destroy(EleStack *ele) {
   if (ele) {
     if(ele->e) {
-			free(ele->e);
-		}
+		free(ele->e);
+	}
     free(ele);
   }
 }
@@ -51,7 +51,7 @@ Status EleStack_setInfo(EleStack *ele, void *eleinfo) {
 	if(ele->e)
   	free(ele->e);
 
-  ele->e = (int *) calloc(1, sizeof(int));
+	ele->e = (int *) calloc(1, sizeof(int));
 	if (!ele->e)
 		return ERROR;
 
